@@ -3,11 +3,19 @@ let input2=document.querySelector("#second");
 
 let check=document.querySelector("#check")
 let option=document.querySelector("#option")
-result=0
+let result=0;
 
 check.addEventListener("click",()=>{
     if(option.value =="+"){
-        result+=input1.value + input2.value
-        alert(result)
-    }
-})
+        result+=Number(input1.value) + Number(input2.value)
+        alert(result);
+    }else if(option.value =="-"){
+        result+=Number(input1.value) - Number(input2.value)
+        alert(result);
+}else if(option.value =="*"){
+    result+=Number(input1.value) * Number(input2.value)
+    alert(result);}
+    else if(option.value =="/"){
+        result+=Number(input1.value) / Number(input2.value)
+        alert(result);}
+});
